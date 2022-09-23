@@ -1,0 +1,57 @@
+---
+title: "p8105_hw1_Ruihan"
+author: "Ruihan Zhang"
+date: "2022-09-23"
+output: html_document
+---
+
+```{r setup}
+install.packages("palmerpenguins")
+data("penguins", package = "palmerpenguins")
+library(tidyverse)
+library(ggplot2)
+plot = tibble(
+  bill_length_mm = penguins$bill_length_mm,
+  flipper_length_mm = penguins$flipper_length_mm,
+)
+
+ggplot(plot, aes(x=bill_length_mm, y=flipper_length_mm)) + geom_point(aes(color=penguins$species))
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+The important variables are species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex and year.
+The size is `r nrow(penguins)` rows and `r ncol(penguins)` columns.
+The mean flipper length is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` mm.
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+plot2 = tibble(
+  norm = rnorm(10),
+  logical = norm > 0,
+  norm_a = as.character(norm)
+  norm_c = 
+)  
+mean(pull(plot2,norm))
+mean(pull(plot2,logical))
+mean(pull(plot2,norm_a))
+
+
+#norm_c=factor(norm,3)
+as.numeric(plot2$norm_a)
+as.numeric(plot2$norm_c)
+as.numeric(plot2$logical)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
