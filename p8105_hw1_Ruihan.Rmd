@@ -43,13 +43,13 @@ The mean of norm_c is `r mean(pull(plot2,norm_c))`.
 ```{r eval = FALSE}
 as.numeric(plot2$norm_a)
 as.numeric(plot2$norm_c)
-
+as.numeric(plot2$logical)
 ```
 
 
 The mean of norm_a is `r mean(as.numeric(plot2$norm_a))`.
 The mean of norm_c is `r mean(as.numeric(plot2$norm_c))`.
-
+The mean of logical is `r mean(as.numeric(plot2$logical))`.
 
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

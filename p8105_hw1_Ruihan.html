@@ -404,15 +404,15 @@ chunk like this:</p>
   norm = rnorm(10),
   logical = norm &gt; 0,
   norm_a = as.character(norm),
-  norm_c = factor(norm,3)
-)  
-
-#norm_c=factor(norm,3)</code></pre>
-<p>The mean of norm is -0.2838207. The mean of logical is 0.3. The mean
+  norm_c = factor(c(&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;low&quot;, &quot;medium&quot;, &quot;high&quot;, &quot;high&quot;), levels = c(&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;))
+)  </code></pre>
+<p>The mean of norm is -0.0872746. The mean of logical is 0.6. The mean
 of norm_a is NA. The mean of norm_c is NA.</p>
 <pre class="r"><code>as.numeric(plot2$norm_a)
-as.numeric(plot2$norm_c)</code></pre>
-<p>The mean of norm_a is -0.2838207. The mean of norm_c is NA.</p>
+as.numeric(plot2$norm_c)
+as.numeric(plot2$logical)</code></pre>
+<p>The mean of norm_a is -0.0872746. The mean of norm_c is 2.1. The mean
+of logical is 0.6.</p>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the
 code chunk to prevent printing of the R code that generated the
 plot.</p>
