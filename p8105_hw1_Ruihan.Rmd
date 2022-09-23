@@ -49,8 +49,8 @@ as.numeric(plot2$norm_c)
 ```
 
 
-The mean of norm is `r mean(as.numeric(plot2$norm_a))`
-
+The mean of norm_a is `r mean(as.numeric(plot2$norm_a))`.
+The mean of norm_c is `r mean(as.numeric(plot2$norm_c))`.
 
 
 
