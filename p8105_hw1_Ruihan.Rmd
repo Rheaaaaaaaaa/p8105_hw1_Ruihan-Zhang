@@ -45,13 +45,13 @@ The mean of norm_c is `r mean(pull(plot2,norm_c))`.
 ```{r eval = FALSE}
 as.numeric(plot2$norm_a)
 as.numeric(plot2$norm_c)
-```
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
 ```
+
+
+The mean of norm is `r mean(as.numeric(plot2$norm_a))`
+
+
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
