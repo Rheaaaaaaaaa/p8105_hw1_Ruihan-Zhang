@@ -32,10 +32,8 @@ plot2 = tibble(
   norm = rnorm(10),
   logical = norm > 0,
   norm_a = as.character(norm),
-  norm_c = factor(norm,3)
+  norm_c = factor(c("low", "medium", "high", "low", "medium", "high", "low", "medium", "high", "high"), levels = c("low", "medium", "high"))
 )  
-
-#norm_c=factor(norm,3)
 
 ```
 The mean of norm is `r mean(pull(plot2,norm))`.
